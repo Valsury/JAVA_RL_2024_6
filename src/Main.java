@@ -1,15 +1,17 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        char[] chars = {'H', 'e', 'l', 'l', 'o'};
+        MyString1 str = new MyString1(chars);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        System.out.println("Original: " + str);
+        System.out.println("Char at index 1: " + str.charAt(1));
+        System.out.println("Length: " + str.length());
+        System.out.println("Substring (1, 4): " + str.substring(1, 4));
+        System.out.println("Lowercase: " + str.toLowerCase());
+        System.out.println("Value of 123: " + MyString1.valueOf(123));
+        System.out.println("To chars: " + new String(str.toChars()));
+
+        MyString1 str2 = new MyString1(new char[]{'H', 'e', 'l', 'l', 'o'});
+        System.out.println("Equals: " + str.equals(str2));
     }
 }
